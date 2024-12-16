@@ -62,3 +62,13 @@ const sumArray = (arr) => {
   arr.forEach((item) => (sum += item));
   return sum;
 };
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#4: Filter Even Numbers: Write a function to return a new array containing only even numbers from the input array.
+
+const evenNumsOnly = (...arr) => {
+  const evens = (item) => item % 2 === 0;
+  return arr.filter(evens);
+};
+console.log(evenNumsOnly(1, 2, 3, 4, 5, 6, 7, 8));
