@@ -90,3 +90,11 @@ const FibonacciSequence = (n) => {
   return sequences;
 };
 console.log(FibonacciSequence(11));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#6: Magic Number: Write a function to find all numbers in an array that are divisible by both 3 and 5.
+
+const magicNums = (arr) => arr.filter((item) => item % 3 === 0 && item % 5 === 0);
+
+console.log(magicNums([1, 2, 3, 4, 15, 25, 30, 45, 785, 255]));
