@@ -47,3 +47,18 @@ const findMaxValue = (arr) => {
 };
 
 console.log(findMaxValue([1, 3, 5, 8, 11, 2, 55]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#3: Sum of Array Elements: Create a function to calculate the sum of all elements in an array.
+
+const arrSum = (arr) => arr.reduce((result, current) => result + current, 0);
+console.log(arrSum([1, 2, 3, 4, 5]));
+
+// method 2
+
+const sumArray = (arr) => {
+  const sum = 0;
+  arr.forEach((item) => (sum += item));
+  return sum;
+};
