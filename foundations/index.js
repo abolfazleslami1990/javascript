@@ -98,3 +98,16 @@ console.log(FibonacciSequence(11));
 const magicNums = (arr) => arr.filter((item) => item % 3 === 0 && item % 5 === 0);
 
 console.log(magicNums([1, 2, 3, 4, 15, 25, 30, 45, 785, 255]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#7: Even-Odd Sort: Sort the array so that all even numbers appear first (in ascending order), followed by all odd numbers (also in ascending order).
+
+const nums = [12, 7, 25, 4, 18, 9, 33, 10, 2, 15, 5, 27, 6, 22, 19];
+const evenOddSort = (arr) => {
+  const evens = arr.filter((item) => item % 2 === 0).sort((a, b) => a - b);
+  const odds = arr.filter((item) => item % 2 !== 0).sort((a, b) => a - b);
+  return [...evens, ...odds];
+};
+
+console.log(evenOddSort(nums));
