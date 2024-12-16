@@ -111,3 +111,23 @@ const evenOddSort = (arr) => {
 };
 
 console.log(evenOddSort(nums));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#8: Number to Binary: Convert each number in an array to its binary representation (as a string).
+
+const numbersToBinary = (arr) => {
+  function convertToBinary(item) {
+    const binary = [];
+    let num = item;
+    while (num > 0) {
+      const bi = num % 2;
+      binary.unshift(String(bi));
+      num = Math.floor(num / 2);
+    }
+    return binary.join('').padStart(8, '0');
+  }
+  return arr.map(convertToBinary);
+};
+
+console.log(numbersToBinary([5, 10, 25, 78, 22]));
