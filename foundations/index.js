@@ -4,8 +4,8 @@
 
 // 2. check for special characters are included, if not, replace at least two characters with special ones
 
+const randomNum = (max) => Math.floor(Math.random() * max);
 const passKey = (length) => {
-  const randomNum = (max) => Math.floor(Math.random() * max);
   const alphanumericChars =
     '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const specialChars = '!@#$%^&*';
@@ -148,3 +148,16 @@ const missingNumbers = (arr) => {
 };
 
 console.log(missingNumbers([1, 3, 5]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#10: Coin Toss Simulation: Simulate 10 coin tosses (e.g., "H" for heads and "T" for tails) and store the results in an array.
+
+const coinToss = (n) => {
+  //randomNum function is at the top of document
+  const simulate = [];
+  const coinFaces = 'HT';
+  for (let i = 0; i < n; i++) simulate.push(coinFaces[randomNum(coinFaces.length)]);
+  return simulate;
+};
+console.log(coinToss(10));
