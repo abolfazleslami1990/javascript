@@ -131,3 +131,20 @@ const numbersToBinary = (arr) => {
 };
 
 console.log(numbersToBinary([5, 10, 25, 78, 22]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#9: Missing Numbers: Given an array of consecutive integers with numbers missing, find missing numbers.
+
+const missingNumbers = (arr) => {
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  const newArr = new Set(arr);
+  const missingNums = [];
+  for (let i = min; i <= max; i++) {
+    if (!newArr.has(i)) missingNums.push(i);
+  }
+  return missingNums;
+};
+
+console.log(missingNumbers([1, 3, 5]));
