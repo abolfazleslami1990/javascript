@@ -29,3 +29,21 @@ const passKey = (length) => {
 };
 
 console.log(passKey(26));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#2: Find Maximum Value: Write a function to find the largest number in an array.
+
+const maxValue = (arr) => Math.max(...arr);
+console.log(maxValue([1, 3, 5, 8, 11, 2, 55]));
+
+// or using custom function
+
+const findMaxValue = (arr) => {
+  return arr.reduce(
+    (result, current) => (result > current ? result : current),
+    -Infinity,
+  );
+};
+
+console.log(findMaxValue([1, 3, 5, 8, 11, 2, 55]));
