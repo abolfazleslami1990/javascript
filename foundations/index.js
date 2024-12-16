@@ -72,3 +72,21 @@ const evenNumsOnly = (...arr) => {
   return arr.filter(evens);
 };
 console.log(evenNumsOnly(1, 2, 3, 4, 5, 6, 7, 8));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#5: Fibonacci Sequence: Create a function that generates the first n Fibonacci numbers and stores them in an array.
+
+const FibonacciSequence = (n) => {
+  const sequences = [];
+  for (let i = 0; i < n; i++) {
+    if (sequences.length < 2) {
+      sequences.push(i);
+    } else {
+      const sum = sequences[i - 1] + sequences[i - 2];
+      sequences.push(sum);
+    }
+  }
+  return sequences;
+};
+console.log(FibonacciSequence(11));
