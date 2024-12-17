@@ -208,3 +208,11 @@ console.log(countVowels(['apple', 'banana', 'cherry']));
 const findLargest = (arr) =>
   arr.reduce((result, current) => (current > result ? current : result), -Infinity);
 console.log(findLargest([1, 9, 3, 7, 5]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#15: Filter Long Strings: Write a function to filter out strings shorter than _n_ characters.
+
+const filterLongStrings = (arr, n) => arr.filter((item) => item.length >= n);
+
+console.log(filterLongStrings(['a', 'hello', 'world', 'hi'], 3));
