@@ -224,3 +224,11 @@ console.log(filterLongStrings(['a', 'hello', 'world', 'hi'], 3));
 const productOfNumbers = (arr) =>
   arr.reduce((result, current) => result * current, 1);
 console.log(productOfNumbers([1, 2, 3, 4]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#17: Count True Values: Write a function that takes an array of booleans and counts the number of true values.
+
+const countTrue = (arr) =>
+  arr.reduce((result, current) => (current ? (result += 1) : result), 0);
+console.log(countTrue([true, false, true, false, true]));
