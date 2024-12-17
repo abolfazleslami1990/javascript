@@ -161,3 +161,14 @@ const coinToss = (n) => {
   return simulate;
 };
 console.log(coinToss(10));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#11: Sum of Even Numbers: Write a function that takes an array of numbers and returns the sum of all the even numbers.
+
+const sumOfEvens = (arr) => {
+  return arr
+    .filter((item) => item % 2 === 0)
+    .reduce((result, current) => result + current, 0);
+};
+console.log(sumOfEvens([1, 2, 3, 4, 5, 6]));
