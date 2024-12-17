@@ -200,3 +200,11 @@ const countVowels = (arr) => {
   return arr.join('').match(regex).length;
 };
 console.log(countVowels(['apple', 'banana', 'cherry']));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#14: Find Largest Element: Write a function to find the largest number in an array.
+
+const findLargest = (arr) =>
+  arr.reduce((result, current) => (current > result ? current : result), -Infinity);
+console.log(findLargest([1, 9, 3, 7, 5]));
