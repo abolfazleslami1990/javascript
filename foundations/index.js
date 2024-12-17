@@ -190,3 +190,13 @@ const deleteDuplicates = (arr) => {
   return newArr;
 };
 console.log(deleteDuplicates([1, 2, 3, 2, 4, 1]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#13: Count Vowels: Write a function that takes an array of strings and counts the total number of vowels in all strings.
+
+const countVowels = (arr) => {
+  const regex = /[aeiou]/g;
+  return arr.join('').match(regex).length;
+};
+console.log(countVowels(['apple', 'banana', 'cherry']));
