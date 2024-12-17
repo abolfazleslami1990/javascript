@@ -172,3 +172,21 @@ const sumOfEvens = (arr) => {
     .reduce((result, current) => result + current, 0);
 };
 console.log(sumOfEvens([1, 2, 3, 4, 5, 6]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#12: Remove Duplicates: Write a function that removes duplicate elements from an array.
+
+const removeDuplicates = (arr) => [...new Set(arr)];
+console.log(removeDuplicates([1, 2, 3, 2, 4, 1]));
+
+// medtod 2
+
+const deleteDuplicates = (arr) => {
+  const newArr = [];
+  for (const item of arr) {
+    if (!newArr.includes(item)) newArr.push(item);
+  }
+  return newArr;
+};
+console.log(deleteDuplicates([1, 2, 3, 2, 4, 1]));
