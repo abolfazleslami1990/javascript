@@ -216,3 +216,11 @@ console.log(findLargest([1, 9, 3, 7, 5]));
 const filterLongStrings = (arr, n) => arr.filter((item) => item.length >= n);
 
 console.log(filterLongStrings(['a', 'hello', 'world', 'hi'], 3));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#16: Product of All Numbers: Write a function to calculate the product of all numbers in an array.
+
+const productOfNumbers = (arr) =>
+  arr.reduce((result, current) => result * current, 1);
+console.log(productOfNumbers([1, 2, 3, 4]));
