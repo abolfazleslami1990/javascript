@@ -232,3 +232,28 @@ console.log(productOfNumbers([1, 2, 3, 4]));
 const countTrue = (arr) =>
   arr.reduce((result, current) => (current ? (result += 1) : result), 0);
 console.log(countTrue([true, false, true, false, true]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#18: Group Anagrams: Write a function that groups strings that are anagrams of each other from an array of strings
+
+const groupAnagrams = (arr) => {
+  const visited = [];
+  const grouping = [];
+  arr.forEach((item) => {
+    if (!visited.includes(item)) {
+      const subGroup = [];
+      arr.forEach((anotherItem) => {
+        const firstItem = item.split('').sort().join('');
+        const secondItem = anotherItem.split('').sort().join('');
+        if (firstItem === secondItem) {
+          subGroup.push(anotherItem);
+          visited.push(anotherItem);
+        }
+      });
+      grouping.push(subGroup);
+    }
+  });
+  return grouping;
+};
+console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
