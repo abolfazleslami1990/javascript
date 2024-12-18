@@ -257,3 +257,19 @@ const groupAnagrams = (arr) => {
   return grouping;
 };
 console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#19: Flatten Nested Arrays: Write a function that recursively flattens an array of arbitrary depth.
+
+const flatten = (arr) => {
+  const newArr = [];
+  const stack = [...arr];
+  while (stack.length > 0) {
+    const check = stack.pop();
+    if (Array.isArray(check)) stack.push(...check);
+    else newArr.unshift(check);
+  }
+  return newArr;
+};
+console.log(flatten([1, [2, [3, [4, [5]]]]]));
