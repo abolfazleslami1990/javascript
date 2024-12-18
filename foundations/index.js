@@ -273,3 +273,24 @@ const flatten = (arr) => {
   return newArr;
 };
 console.log(flatten([1, [2, [3, [4, [5]]]]]));
+
+//-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+
+// Question#20: Find Most Frequent Element: Write a function that finds the most frequent element in an array. If there is a tie, return the smallest number.
+
+const mostFrequent = (arr) => {
+  let mostFrequentItem;
+  let mostFrequentCount = 0;
+  arr.forEach((item) => {
+    let count = 0;
+    arr.forEach((anotherItem) => {
+      if (item === anotherItem) count++;
+      if (count > mostFrequentCount) {
+        mostFrequentCount = count;
+        mostFrequentItem = item;
+      }
+    });
+  });
+  return mostFrequentItem;
+};
+console.log(mostFrequent([1, 2, 3, 3, 2, 1, 3]));
